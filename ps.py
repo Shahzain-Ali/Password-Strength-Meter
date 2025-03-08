@@ -87,8 +87,6 @@ if password:
         st.write("⚠️ Warning:")
         st.write(f"- {feedback['warning']}")
     
-    # Display score as a progress bar
-    st.progress((score + 1) / 5)
     
     # Password strength meter visualization
     st.write("Strength Meter:")
@@ -108,5 +106,5 @@ if password:
             cols[i].markdown(f"<div style='background-color: {color}; height: 10px; border-radius: 5px;'></div>", unsafe_allow_html=True)
         else:
             cols[i].markdown("<div style='background-color: gray; height: 10px; border-radius: 5px;'></div>", unsafe_allow_html=True)
-
+st.markdown("------")
 st.write("Developed by Shahzain Ali")
