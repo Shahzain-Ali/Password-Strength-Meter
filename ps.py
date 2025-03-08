@@ -1,5 +1,5 @@
 import streamlit as st
-from zxcvbn import zxcvbn
+import zxcvbn
 import re
 
 st.set_page_config("🔐 Password Strength Meter")
@@ -24,7 +24,7 @@ def custom_password_check(password):
 
 def check_password_strength(password):
     # Get zxcvbn score
-    result = zxcvbn(password)
+    result = zxcvbn.zxcvbn(password)
     base_score = result['score']
     feedback = result['feedback']
     
