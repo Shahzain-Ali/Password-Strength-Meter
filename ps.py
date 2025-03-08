@@ -87,12 +87,6 @@ if password:
         st.write("⚠️ Warning:")
         st.write(f"- {feedback['warning']}")
     
-    # Display suggestions if any
-    if feedback['suggestions']:
-        st.write("🔹 Suggestions:")
-        for suggestion in feedback['suggestions']:
-            st.write(f"- {suggestion}")
-    
     # Display score as a progress bar
     st.progress((score + 1) / 5)
     
